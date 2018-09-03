@@ -1,7 +1,8 @@
 class Song
 
 def initialize
-  @@artist
+  @@artist = artist
+end
 
 def self.new_by_filename(filename)
 end
