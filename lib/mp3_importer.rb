@@ -8,7 +8,8 @@ class MP3Importer
   end
 
   def files
-    Dir["/path/to/search/*"]
+    Dir.foreach(MP3Importer.new('./db/mp3s').import) do
+|mp3|
   end
 
   def import(list_of_filenames)
