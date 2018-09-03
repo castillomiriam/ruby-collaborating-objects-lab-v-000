@@ -23,8 +23,13 @@ def save
   @@all << self
 end
 
-def self.find_or_create_by_name(name)
-    self.find(name) ? self.find(name) : self.create(name)
+def self.find_or_create_by_name(artist_name)
+  if @@all.find {|artist| artist.name == artist_name} == nil
+      new_artist = self.new(artist_name)
+      new_artist
+    else
+      @@all.find {|artist| artist.name == artist_name}
+    end
   end
 
 def print_songs
