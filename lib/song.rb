@@ -1,5 +1,8 @@
 class Song
 
+def initialize
+  @@artist
+
 def self.new_by_filename(filename)
 end
 
