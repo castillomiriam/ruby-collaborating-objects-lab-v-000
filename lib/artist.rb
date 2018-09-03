@@ -13,8 +13,8 @@ def add_song(song)
   @songs << song
 end
 
-def save()
-  @artist << @@all
+def save
+  @@all << self 
 end
 
 
