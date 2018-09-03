@@ -8,9 +8,7 @@ class MP3Importer
   end
 
   def files
-    Dir.foreach(MP3Importer.new('./db/mp3s').import) do
-|mp3|
-  end
+    @files ||= Dir.glob("#{path}/*.mp3").collect{ |f| f.gsub("#{path}/", "") }
 end
 
   def import(list_of_filenames)
