@@ -7,9 +7,11 @@ def initialize(name)
 end
 
 def self.new_by_filename(filename)
-  song = self.new
-   song.name = filename.split(" - ")[0]
-   song.artist = filename.split(" - ")[1]
+   name = filename.split(" - ")[1]
+   song = self.new(name)
+   artist_name = filename.split(" - ")[0]
+   artist = Artist.find_or_create_by_name(artist_name)
+   artist.add_song(song)
    song
  end
 
