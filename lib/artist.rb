@@ -27,7 +27,8 @@ def self.find_or_create_by_name
 end
 
 def print_songs
-  @@all
+  self.songs.each do |song|
+    puts song.name
 end
 
 end
