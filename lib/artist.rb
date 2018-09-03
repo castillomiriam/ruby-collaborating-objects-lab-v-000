@@ -14,7 +14,7 @@ def add_song(song)
 end
 
 def save()
-  
+  @artist<< @@all
 end
 
 
