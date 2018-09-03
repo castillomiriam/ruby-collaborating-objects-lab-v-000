@@ -11,6 +11,7 @@ class MP3Importer
     Dir.foreach(MP3Importer.new('./db/mp3s').import) do
 |mp3|
   end
+end
 
   def import(list_of_filenames)
     list_of_filenames.each{ |filename|
